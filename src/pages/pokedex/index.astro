@@ -1,0 +1,16 @@
+---
+import Layout from '@layouts/MainLayout.astro';
+import Navbar from '@components/Navbar.astro';
+import Card from '@components/React/Card';
+---
+
+<Layout title='Pokedex'>
+  <Navbar />
+  <main class='mx-auto py-16'>
+    <section>
+      <div class='container mx-auto'>
+        <Card client:load />
+      </div>
+    </section>
+  </main>
+</Layout>

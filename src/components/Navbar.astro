@@ -1,0 +1,39 @@
+---
+const { pathname } = Astro.url;
+
+const lists = [
+  { name: 'Home', url: '/' },
+  { name: 'PokeDex', url: '/pokedex' },
+];
+
+const baseClass = 'hover:border-b-[3px] border-b-orange-400';
+---
+
+<nav class='flex items-end justify-between p-4 bg-white'>
+  <div class='container mx-auto flex justify-between gap-8'>
+    <a href='/'>
+      <div class='logo'>
+        <h1 class='text-2xl font-semibold'>Poke</h1>
+      </div>
+    </a>
+    <div class='flex content-center'>
+      <ul class='flex basis-4/5 gap-x-8'>
+        {
+          lists.map((item) => (
+            <li class='flex flex-col content-center'>
+              <a
+                href={item.url}
+                class:list={[
+                  baseClass,
+                  { 'border-b-[3px]': item.url === pathname },
+                ]}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
