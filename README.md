@@ -1,3 +1,5 @@
+![astro-poke](https://github.com/rifkyalamsyah/astro-poke/assets/59393904/38cfe7c0-9df2-4774-a099-2a3a60059001)
+
 # Astro Starter Kit: Minimal
 
 ```sh
